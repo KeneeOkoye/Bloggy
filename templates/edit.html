@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<section class="container2">
+    <h1>Edit Your Blog Post</h1>
+    <form action="/edit/{{blog.id}}/" method="POST">
+        <div class="c2">
+            <label for="title">Title</label><br>
+            <input type="text" name="title" id="title" class="form1" value="{{blog.title}}">
+        </div><br>
+
+        <div class="c2">
+            <label for="content">Content</label><br>
+            <textarea name="content" rows="10" cols="50">{{blog.content}}</textarea>
+        </div><br>
+
+        <button class="sub">Save Changes</button>
+    </form>
+</section>
+{% endblock content %}

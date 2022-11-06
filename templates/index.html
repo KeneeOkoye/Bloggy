@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if current_user.is_authenticated %}
+<div class="text2">
+    <h1>Welcome, You have been logged in to Bloggy📝!!! </h1>
+</div><br><br><br><br>
+{% else %}
+<div class="text2">
+    <h1>Welcome to Bloggy📝!!!</h1>
+</div><br><br><br><br>
+{% endif %}
+
+{% if blogs %}
+<div class="table_wrapper">
+  <table>
+    <thead>
+      <th>Blog</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      {% for blog in blogs %}
+      {% if current_user.id == article.user_id %}
+      <tr>
+        <td><a href="/blog/{{blog.id}}/">{{blog.title}}</a></td>
+        <td>{{blog.author}}</td>
+        <td>{{blog.created_on.strftime('%d/%b/%Y')}}</td>
+        <td>
+          <a href="/edit/{{blog.id}}/">Edit</a>
+          <a href="/delete/{{blog.id}}/">Delete</a>
+        </td>
+      </tr>
+      {% else %}
+      <tr>
+        <td><a href="/blog/{{blog.id}}/">{{blog.title}}</a></td>
+        <td>{{blog.author}}</td>
+        <td>{{blog.created_on.strftime('%d/%b/%Y')}}</td>
+        <td>
+          <a href="/blog/{{blog.id}}/">View</a>
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<br>
+{% if current_user.is_authenticated %}
+<p><a href="{{url_for('contribute')}}" class="sub">Contribute</a></p>
+{% else %}
+<p>Register now to make blog posts!<a href="{{url_for('register')}}">Sign Up</a></p>
+{% endif %}
+{% else %}
+<p style="color: black; font-style: italic; font-weight: bold;">
+  No blog posts have been uploaded yet.
+  {% if current_user.is_authenticated %}
+  <a href="{{url_for('contribute')}}">Create One</a>
+  {% else %}
+  <a href="{{url_for('login')}}">Log In</a>
+  {% endif %}
+</p>
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,210 @@
+body {
+	background-image: url(background.jpg);
+	background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+li.title {
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+}
+
+ul.navbar {
+    /* position: fixed; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+ul.navbar li {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+ul.navbar li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: rgb(192, 119, 3);
+    padding: 14px 16px;
+}
+
+.active {
+    background-color: rgb(18, 131, 4);
+    padding: 14px 16px;
+}
+
+footer {
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: rgb(0, 0, 0);
+}
+
+div.new {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+}
+
+div.image {
+    flex-basis: 50%;
+    padding: 40px;
+    border: 1px;
+}
+
+div.text {
+    text-align: center;
+    padding: 40px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-basis: 150%;
+}
+
+div.text2 {
+    text-align: center;
+    padding: 40px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div.c1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.c11, div.c12, div.c13 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    margin: 20px;
+    flex-basis: 50%;
+    font-size: 18px;
+}
+
+section.container2, section.container3, section.container4 {
+    background-color: rgba(192, 119, 3, 0.5);
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;;
+    padding: 20px;
+    margin: auto; /* to center the container*/
+    font-size: 18px;
+    width: 421px;
+
+}
+
+input.form1, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none; /* this is to prevent the text area from being resized*/
+}
+
+button.sub {
+    width: 100%;
+    background-color: rgb(25, 150, 9);
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button.sub:hover {
+    background-color: rgb(57, 230, 34);
+}
+
+a.loginlink {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.loginlink:hover {
+    color: rgb(57, 230, 34);
+}
+
+div.container5 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 300px;
+    margin-top: 20px;
+    
+}
+
+.blog-control {
+  width: 100%;
+}
+
+.table_wrapper {
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+th {
+  width: 200px;
+  background-color: rgb(22, 180, 67);
+  color: floralwhite;
+  padding: 10px;
+  border: 1px dotted rgb(219, 14, 14);
+}
+td {
+  padding: 8px;
+  border: 1px dotted rgb(219, 14, 14);
+}
+
+.button {
+    max-width: fit-content;
+    background-color: rgb(25, 150, 9);
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.button:hover {
+    background-color: rgb(57, 230, 34);
+}

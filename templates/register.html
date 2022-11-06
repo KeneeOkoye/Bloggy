@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="container3">
+    <h1>Create an Account</h1>
+    <form action="{{url_for('register')}}" method="POST">
+        <div class="r1">
+            <label for="first_name">First Name</label><br>
+            <input type="text" name="first_name" id="first_name" class="form1" placeholder="First Name"required>
+        </div><br>
+
+        <div class="r1">
+            <label for="last_name">Last Name</label><br>
+            <input type="text" name="last_name" id="last_name" class="form1" placeholder="Last Name" required>
+        </div><br>
+
+        <div class="r1">
+            <label for="username">Username</label><br>
+            <input type="text" name="username" id="username" class="form1" placeholder="Username" required>
+        </div><br>
+
+        <div class="r1">
+            <label for="email">Email<br>
+            <input type="email" name="email" id="email" class="form1" placeholder="mary@example.com" required>
+        </div><br>
+
+        <div class="r1">
+            <label for="password">Password</label><br>
+            <input type="password" name="pwd" id="pwd" class="form1" placeholder="Password" minlength="8" required>
+        </div><br>
+
+        <div class="r3">
+            <input type="submit" value="Sign Up" class="button"/>
+        </div>
+
+        <div class="r2">
+            <p>Already have an account?<a class="loginlink" href="{{url_for('login')}}">&nbsp; Login</a></p>
+        </div>
+    </form>
+</section>
+
+{% endblock content%}

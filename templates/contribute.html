@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<section class="container2">
+    <h1>Create New Blog Post 👀</h1>
+    <form action="{{url_for('contribute')}}" method="POST">
+        <div class="c2">
+            <label for="title">Title</label><br>
+            <input type="text" name="title" id="title" class="form1" placeholder="Blog Post Title" required>
+        </div><br>
+
+        <div class="c2">
+            <label for="content">Content</label><br>
+            <textarea name="content" rows="10" cols="50" placeholder="Write down your thoughts..." required></textarea>
+        </div><br>
+
+        <button class="sub">Submit</button>
+    </form>
+</section>
+{% endblock content %}

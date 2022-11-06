@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="container2">
+    <h1>CONTACT US</h1>
+    <form action="{{url_for('contact')}}" method="POST">
+        <div class="c2">
+            <label for="name">Name</label><br>
+            <input type="text" name="fullname" id="fullname" class="form1" placeholder="Your Name...">
+        </div><br>
+
+        <div class="c2">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" class="form1" placeholder="mary@example.com" required>
+        </div><br>
+
+        <div class="c2">
+            <label for="title">Title</label><br>
+            <input type="text" name="title" id="title" class="form1" placeholder="Message Title" required>
+        </div><br>
+
+        <div class="c2">
+            <label for="message">Message</label><br>
+            <textarea name="message" rows="10" cols="30">Leave a message...</textarea>
+        </div><br>
+
+        <div class="c2">
+            <label for="priority">Priority</label><br>
+            <select name="priority" required>
+                <option value="high">High</option>
+                <option value="low">Low</option>
+            </select>
+        </div><br>
+
+        <button class="sub">Submit</button>
+    </form>
+</section>
+{% endblock content%}

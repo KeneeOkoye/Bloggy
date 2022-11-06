@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="container4">
+    <h1>Log In</h1>
+    <form action="{{url_for('login')}}" method="POST">
+        <div class="r3">
+            <label for="username">Username</label><br>
+            <input type="text" name="username" id="username" class="form1" placeholder="Username" required>
+        </div><br>
+
+        <div class="r3">
+            <label for="password">Password</label><br>
+            <input type="password" name="pwd" id="pwd" class="form1" placeholder="Password" minlength="8" required>
+        </div><br>
+
+        <div class="r3">
+            <input type="submit" value="Log In" class="button"/>
+        </div>
+
+    </form>
+</section><br><br><br>       
+
+{% endblock content%}
